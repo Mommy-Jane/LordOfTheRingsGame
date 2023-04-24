@@ -1,0 +1,3 @@
+Tady budou dialogy ve forme
+Hráč: bal
+postsava: bla
