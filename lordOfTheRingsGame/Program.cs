@@ -11,7 +11,7 @@ namespace lordOfTheRingsGame
         static void Main(string[] args)
         {
             player plr = new player();
-            plr.name = "Ahoj"
+            plr.name = "Ahoj";
             Console.WriteLine(plr.name);
         }
     }
