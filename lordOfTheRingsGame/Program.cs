@@ -11,6 +11,9 @@ namespace lordOfTheRingsGame
         static void Main(string[] args)
         {
             player plr = new player();
+            Console.WriteLine("Jelikož nás tlačil čas, dokončili jsme jenom příběh pro elfy. Při výběru rasy tedy vyberte Elfy");
+            plr.Continue();
+
             Console.WriteLine("Vítejte ve světě Pána prstenů hry!\r\n\r\nDobrý den! Vítáme vás ve světě Pána prstenů, plném dobrodružství a nebezpečí. Před tím, než se ponoříte do této epické hry, potřebujeme znát vaše jméno a rozhodnutí ohledně rasy, za kterou budete hrát.");
             plr.Continue();
             Console.WriteLine("Jaké jméno si přejete pro svou postavu? A zvažujete, zda se připojíte k dobrodružství jako Člověk nebo jako Elf?\r\n\r\nProsím, zapište své jméno níže a poté vyberte jednu z následujících možností:");

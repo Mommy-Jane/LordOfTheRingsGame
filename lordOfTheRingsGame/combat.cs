@@ -10,10 +10,9 @@ namespace lordOfTheRingsGame
         {
             Console.WriteLine("Začíná souboj!");
 
-            int zivotyHrace = 100;
             int zivotyPrisery = 100;
 
-            while (zivotyHrace > 0 && zivotyPrisery > 0)
+            while (hrac.GetHealth() > 0 && zivotyPrisery > 0)
             {
                 Console.WriteLine("Vyberte akci:");
                 Console.WriteLine("1. Útok");
@@ -38,7 +37,7 @@ namespace lordOfTheRingsGame
                         int poskozeniPrisery = utokPrisery - utokHrace;
                         if (poskozeniPrisery > 0)
                         {
-                            zivotyHrace -= poskozeniPrisery;
+                            hrac.Damage(poskozeniPrisery);
                             Console.WriteLine($"Příšera zasáhla {hrac.name} a způsobila mu {poskozeniPrisery} bodů poškození.");
                         }
                         else
@@ -69,7 +68,7 @@ namespace lordOfTheRingsGame
                         int poskozeniPrisery = utokPrisery - obranaHrace;
                         if (poskozeniPrisery > 0)
                         {
-                            zivotyHrace -= poskozeniPrisery;
+                            hrac.Damage(poskozeniPrisery);
                             Console.WriteLine($"Příšera zasáhla {hrac.name} a způsobila mu {poskozeniPrisery} bodů poškození.");
                         }
                         else
@@ -88,12 +87,12 @@ namespace lordOfTheRingsGame
                     continue;
                 }
 
-                Console.WriteLine($"Zbývající zdraví hráče: {zivotyHrace}");
+                Console.WriteLine($"Zbývající zdraví hráče: {hrac.GetHealth()}");
                 Console.WriteLine($"Zbývající zdraví příšery: {zivotyPrisery}");
                 Console.WriteLine();
             }
 
-            if (zivotyHrace <= 0)
+            if (hrac.GetHealth() <= 0)
             {
                 Console.WriteLine($"Souboj skončil! {hrac.name} byl poražen.");
             }

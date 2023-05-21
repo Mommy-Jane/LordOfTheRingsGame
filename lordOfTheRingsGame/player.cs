@@ -7,12 +7,23 @@ namespace lordOfTheRingsGame
     {
         public string name = "HAH";
         public string race = "Human";
+        private int health = new Random().Next(50,100);
 
-
-        public void Continue() {
+        public void Continue()
+        {
             Console.WriteLine("Stiskněte libovolnou klávesu . . .");
             Console.ReadKey();
             Console.Clear();
+        }
+
+        public void Damage(int dmg)
+        {
+            health -= dmg;
+        }
+
+        public int GetHealth()
+        {
+            return health;
         }
 
         public void Chooserace()
@@ -22,12 +33,13 @@ namespace lordOfTheRingsGame
             {
                 string raceInput = Console.ReadLine();
 
-                if (raceInput == "1")
+                /*/if (raceInput == "1")
                 {
                     race = "Člověk";
                     validRace = true;
                 }
-                else if (raceInput == "2")
+                else/*/
+                if (raceInput == "2")
                 {
                     race = "Elf";
                     validRace = true;
