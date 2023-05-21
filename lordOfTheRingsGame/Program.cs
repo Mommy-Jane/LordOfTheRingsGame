@@ -10,7 +10,9 @@ namespace lordOfTheRingsGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hewwo");
+            player plr = new player();
+            plr.name = "Ahoj"
+            Console.WriteLine(plr.name);
         }
     }
 }
