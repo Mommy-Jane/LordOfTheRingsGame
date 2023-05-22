@@ -11,8 +11,31 @@ namespace lordOfTheRingsGame
         static void Main(string[] args)
         {
             player plr = new player();
-            Console.WriteLine("Jelikož nás tlačil čas, dokončili jsme jenom příběh pro elfy. Při výběru rasy tedy vyberte Elfy");
-            plr.Continue();
+            Console.Title = "Pán Prstenu: Bitva u Železného Pásu";
+            /* Console.WriteLine("Jelikož nás tlačil čas, dokončili jsme jenom příběh pro elfy. Při výběru rasy tedy vyberte Elfy");
+            plr.Continue(); */
+            Console.WriteLine(@"
+                                 ▄███████▄    ▄████████ ███▄▄▄▄           ▄███████▄    ▄████████    ▄████████     ███        ▄████████ ███▄▄▄▄   ███    █▄                                                                                     
+                                ███    ███   ███    ███ ███▀▀▀██▄        ███    ███   ███    ███   ███    ███ ▀█████████▄   ███    ███ ███▀▀▀██▄ ███    ███                                                                                    
+                                ███    ███   ███    ███ ███   ███        ███    ███   ███    ███   ███    █▀     ▀███▀▀██   ███    █▀  ███   ███ ███    ███                                                                                    
+                                ███    ███   ███    ███ ███   ███        ███    ███  ▄███▄▄▄▄██▀   ███            ███   ▀  ▄███▄▄▄     ███   ███ ███    ███                                                                                    
+                              ▀█████████▀  ▀███████████ ███   ███      ▀█████████▀  ▀▀███▀▀▀▀▀   ▀███████████     ███     ▀▀███▀▀▀     ███   ███ ███    ███                                                                                    
+                                ███          ███    ███ ███   ███        ███        ▀███████████          ███     ███       ███    █▄  ███   ███ ███    ███                                                                                    
+                                ███          ███    ███ ███   ███        ███          ███    ███    ▄█    ███     ███       ███    ███ ███   ███ ███    ███                                                                                    
+                               ▄████▀        ███    █▀   ▀█   █▀        ▄████▀        ███    ███  ▄████████▀     ▄████▀     ██████████  ▀█   █▀  ████████▀                                                                                     
+                                                                                      ███    ███                                                                                                                                               
+▀█████████▄   ▄█      ███      ▄█    █▄     ▄████████      ███    █▄        ▄███████▄     ▄████████  ▄█          ▄████████  ▄███████▄  ███▄▄▄▄      ▄████████    ▄█    █▄     ▄██████▄          ▄███████▄    ▄████████    ▄████████ ███    █▄  
+  ███    ███ ███  ▀█████████▄ ███    ███   ███    ███      ███    ███      ██▀     ▄██   ███    ███ ███         ███    ███ ██▀     ▄██ ███▀▀▀██▄   ███    ███   ███    ███   ███    ███        ███    ███   ███    ███   ███    ███ ███    ███ 
+  ███    ███ ███▌    ▀███▀▀██ ███    ███   ███    ███      ███    ███            ▄███▀   ███    █▀  ███         ███    █▀        ▄███▀ ███   ███   ███    █▀    ███    ███   ███    ███        ███    ███   ███    ███   ███    █▀  ███    ███ 
+ ▄███▄▄▄██▀  ███▌     ███   ▀ ███    ███   ███    ███      ███    ███       ▀█▀▄███▀▄▄  ▄███▄▄▄     ███        ▄███▄▄▄      ▀█▀▄███▀▄▄ ███   ███  ▄███▄▄▄      ▄███▄▄▄▄███▄▄ ███    ███        ███    ███   ███    ███   ███        ███    ███ 
+▀▀███▀▀▀██▄  ███▌     ███     ███    ███ ▀███████████      ███    ███        ▄███▀   ▀ ▀▀███▀▀▀     ███       ▀▀███▀▀▀       ▄███▀   ▀ ███   ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀███▀  ███    ███      ▀█████████▀  ▀███████████ ▀███████████ ███    ███ 
+  ███    ██▄ ███      ███     ███    ███   ███    ███      ███    ███      ▄███▀         ███    █▄  ███         ███    █▄  ▄███▀       ███   ███   ███    █▄    ███    ███   ███    ███        ███          ███    ███          ███ ███    ███ 
+  ███    ███ ███      ███     ███    ███   ███    ███      ███    ███      ███▄     ▄█   ███    ███ ███▌    ▄   ███    ███ ███▄     ▄█ ███   ███   ███    ███   ███    ███   ███    ███        ███          ███    ███    ▄█    ███ ███    ███ 
+▄█████████▀  █▀      ▄████▀    ▀██████▀    ███    █▀       ████████▀        ▀████████▀   ██████████ █████▄▄██   ██████████  ▀████████▀  ▀█   █▀    ██████████   ███    █▀     ▀██████▀        ▄████▀        ███    █▀   ▄████████▀  ████████▀  
+                                                                                                    ▀                                                                                                                                          
+");
+            Console.WriteLine();
+            Console.WriteLine();
 
             Console.WriteLine("Vítejte ve světě Pána prstenů hry!\r\n\r\nDobrý den! Vítáme vás ve světě Pána prstenů, plném dobrodružství a nebezpečí. Před tím, než se ponoříte do této epické hry, potřebujeme znát vaše jméno a rozhodnutí ohledně rasy, za kterou budete hrát.");
             plr.Continue();
@@ -27,7 +50,14 @@ namespace lordOfTheRingsGame
             Console.WriteLine();
             Console.WriteLine("V Napište svou volbu rasy (1 pro Člověka, 2 pro Elfa) a poté stiskněte Enter V");
             plr.Chooserace();
-            Console.WriteLine();
+
+            if (plr.race == "Člověk")
+            {
+                Console.WriteLine();
+                Console.WriteLine("V Vybral jste si rasu lidí, vyberte si třídu bojovníka (1 pro Bojovník, 2 pro Jízdu na Koni) a poté stiskněte Enter V");
+                plr.Chooseclass();
+                Console.WriteLine();
+            }
 
             Console.WriteLine("Dobrá {0} {1}, pojďme společně vydat se na neuvěřitelné dobrodružství ve světě Středozemě!", plr.race, plr.name);
             plr.Continue();
